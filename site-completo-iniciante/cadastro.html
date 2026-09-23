@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Meu Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="limite menu">
+            <h1>Meu Blog</h1>
+
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="index.html#noticias">Notícias</a>
+                <a href="cadastro.html">Cadastro</a>
+                <a href="flexbox.html">Flexbox</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="limite pagina-interna">
+        <section class="caixa-formulario">
+            <h2>Faça seu cadastro</h2>
+            <p>Preencha os campos para receber novidades do blog.</p>
+
+            <form action="#" method="post">
+                <label for="nome">Nome</label>
+                <input id="nome" name="nome" type="text" placeholder="Digite seu nome" required>
+
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="nome@exemplo.com" required>
+
+                <label for="plano">Escolha um plano</label>
+                <select id="plano" name="plano">
+                    <option value="gratuito">Gratuito</option>
+                    <option value="pro">Pro</option>
+                </select>
+
+                <label class="aceite">
+                    <input type="checkbox" name="aceito" required>
+                    Aceito receber novidades do blog
+                </label>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Meu Blog. Projeto criado durante as aulas.</p>
+    </footer>
+</body>
+</html>

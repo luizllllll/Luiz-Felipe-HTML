@@ -1,0 +1,276 @@
+/* O asterisco seleciona todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f5f7;
+    color: #252525;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.limite {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho e menu feitos com Flexbox */
+.cabecalho {
+    background-color: #16324f;
+    color: white;
+    padding: 22px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #5bc0be;
+}
+
+/* Apresentação principal */
+.apresentacao {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 55px 0;
+}
+
+.apresentacao div,
+.apresentacao img {
+    width: 50%;
+}
+
+.apresentacao img {
+    height: 330px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.destaque {
+    color: #287271;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.apresentacao h2 {
+    color: #16324f;
+    font-size: 2.5rem;
+    margin: 10px 0 15px;
+}
+
+.apresentacao p {
+    line-height: 1.6;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #287271;
+    color: white;
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.titulo-secao {
+    color: #16324f;
+    margin-bottom: 25px;
+}
+
+/* As notícias também são organizadas com Flexbox */
+.lista-noticias {
+    display: flex;
+    gap: 25px;
+}
+
+.noticia {
+    width: 50%;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.noticia img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.conteudo-noticia {
+    padding: 20px;
+}
+
+.conteudo-noticia h3 {
+    color: #16324f;
+    margin-bottom: 10px;
+}
+
+.conteudo-noticia p {
+    line-height: 1.6;
+}
+
+.conteudo-noticia a {
+    display: inline-block;
+    color: #287271;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.sobre {
+    background-color: #dfecef;
+    border-left: 5px solid #287271;
+    margin: 40px 0;
+    padding: 25px;
+}
+
+.sobre h2 {
+    color: #16324f;
+    margin-bottom: 8px;
+}
+
+.sobre p {
+    line-height: 1.6;
+}
+
+/* Página do formulário */
+.pagina-interna {
+    min-height: 75vh;
+    padding: 50px 0;
+}
+
+.caixa-formulario {
+    max-width: 550px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.caixa-formulario h2 {
+    color: #16324f;
+    margin-bottom: 8px;
+}
+
+.caixa-formulario > p {
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select,
+button {
+    font: inherit;
+}
+
+input,
+select {
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    padding: 11px;
+}
+
+.aceite {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #287271;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #16324f;
+}
+
+/* Demonstração da aula de Flexbox */
+.explicacao {
+    max-width: 700px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+#pai {
+    min-height: 300px;
+    background-color: #dfecef;
+    border: 3px solid #16324f;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.filho {
+    width: 120px;
+    height: 120px;
+    background-color: #287271;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #16324f;
+    color: white;
+    padding: 22px;
+    text-align: center;
+}
+
+/* Mudanças para telas pequenas */
+@media (max-width: 700px) {
+    .menu,
+    nav,
+    .apresentacao,
+    .lista-noticias {
+        flex-direction: column;
+    }
+
+    .apresentacao div,
+    .apresentacao img,
+    .noticia {
+        width: 100%;
+    }
+
+    .apresentacao h2 {
+        font-size: 2rem;
+    }
+
+    #pai {
+        flex-direction: column;
+    }
+}
